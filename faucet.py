@@ -3,7 +3,7 @@ from pynocaptcha import HcaptchaCracker
 
 address = ''
 cracker = HcaptchaCracker(
-    user_token="***",
+    user_token="https://www.nocaptcha.io/register?c=fm0876  注册后你的个人密钥",
     sitekey="65e4c3a2-66f6-4316-b670-ddfe81fc1a56",
     referer="https://faucet.dev.gblend.xyz/",
     debug=False,
@@ -12,7 +12,6 @@ cracker = HcaptchaCracker(
 ret = cracker.crack()
 if ret:
     url = "https://faucet.dev.gblend.xyz/api/claim"
-
     payload = {"address": address}
     headers = {
         "accept": "*/*",
